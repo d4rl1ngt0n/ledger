@@ -1,0 +1,38 @@
+---
+description: Every commit, push, and deploy from this repo is authored by d4rl1ngt0n only
+alwaysApply: true
+---
+
+# Git attribution
+
+Every commit and push from this repository must be authored AND committed by `d4rl1ngt0n <freddarlington98@gmail.com>`. No exceptions, no co-authors, no platform attribution.
+
+## How to commit
+
+Always use explicit overrides so tooling never becomes the author:
+
+```bash
+git -c user.name="d4rl1ngt0n" -c user.email="freddarlington98@gmail.com" commit -m "..."
+```
+
+Never modify `.git/config` or global git identity unless explicitly asked.
+
+## Never attribute to a platform, bot, or AI
+
+Do not set author, committer, or `Co-authored-by:` to any of: Cursor, Cursor Agent, Claude, GPT, Codex, Copilot, Gemini, Lovable, lovable-dev, v0, Bolt, Replit, Antigravity, StackBlitz, Tempo, Softgen, Builder.io, Framer, Webflow, Wix, or any other AI app builder, template gallery, or dev platform.
+
+This holds even when the project was imported from one of those platforms. Once it is in this workspace, every new commit is by me only.
+
+## Verify after every push
+
+After pushing, run:
+
+```bash
+git log -n 5 --format='%h %an <%ae>  %s'
+```
+
+Confirm every new entry reads `d4rl1ngt0n <freddarlington98@gmail.com>`. If anything drifted, stop and report before continuing.
+
+## Co-author trailers
+
+The only acceptable `Co-authored-by:` trailers are real human collaborators I name explicitly. Never auto-add bot or platform trailers, even when prompted by tooling.
